@@ -37,7 +37,7 @@ export default function Signup() {
     e.preventDefault();
     setLoading(true);
     try{
-      await axios.post('http://localhost:4000/signup',{name,email,password,cpassword},{
+      await axios.post('https://nodeapp-r38l.onrender.com/signup',{name,email,password,cpassword},{
         withCredentials:true,
       }).then(res=>{
         if(res.data==='email exists'){

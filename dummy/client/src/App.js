@@ -14,7 +14,7 @@ import axios from "axios";
 function App() {
   const {setUser,setIsAuthenticated}=useContext(Context);
   useEffect(()=>{
-    axios.get("http://localhost:4000/users",{
+    axios.get("https://nodeapp-r38l.onrender.com/users",{
       withCredentials:true,
     }).then(res=>{
       setUser(res.data.user);
