@@ -4,6 +4,9 @@
   "description": "",
   "type": "module",
   "main": "app.js",
+  "engines": {
+    "node":">=14.20.1"
+  },
   "scripts": {
     "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
