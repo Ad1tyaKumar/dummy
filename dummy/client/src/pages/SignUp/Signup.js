@@ -6,7 +6,7 @@ import Snackbar from '@mui/material/Snackbar';
 import Fade from '@mui/material/Fade';
 import MuiAlert from '@mui/material/Alert';
 import { Context } from '../..';
-
+import backEndUrl from '../../host';
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -37,7 +37,7 @@ export default function Signup() {
     e.preventDefault();
     setLoading(true);
     try{
-      await axios.post('https://nodeapp-r38l.onrender.com/signup',{name,email,password,cpassword},{
+      await axios.post(`${backEndUrl}/signup`,{name,email,password,cpassword},{
         withCredentials:true,
       }).then(res=>{
         if(res.data==='email exists'){

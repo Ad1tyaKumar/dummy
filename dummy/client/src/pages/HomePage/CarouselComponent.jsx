@@ -11,7 +11,7 @@ import Spinner from "./Spinner";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Context } from "../..";
-
+import backEndUrl from "../../host";
 const CarouselComponent = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -23,7 +23,7 @@ const CarouselComponent = () => {
     
     console.log(i)
     if (!saved) {
-      axios.post('https://nodeapp-r38l.onrender.com/book', { i }, { withCredentials: true }).then((res) => {
+      axios.post(`${backEndUrl}/book`, { i }, { withCredentials: true }).then((res) => {
         if (res.data.message === 'Login First') {
           history('/login');
         }
@@ -32,7 +32,7 @@ const CarouselComponent = () => {
         }
       }).catch((e) => { console.log(e); })
     } else {
-      axios.post('https://nodeapp-r38l.onrender.com/unbook', { i }, { withCredentials: true }).then((res) => {
+      axios.post(`${backEndUrl}/unbook`, { i }, { withCredentials: true }).then((res) => {
         setSaved(false);
       }).catch((e) => {
         console.log(e);

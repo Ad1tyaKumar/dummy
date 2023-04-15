@@ -23,7 +23,7 @@ app.use(express.json());
 // app.use(passport.initialize());
 // app.use(passport.session());
 app.use(cors({
-    origin:process.env.FRONTEND_URL,
+    origin:'https://dummy-git-main-ad1tyakumar.vercel.app',
     methods:["GET","POST","PUT","DELETE"],
     credentials:true,
 }))

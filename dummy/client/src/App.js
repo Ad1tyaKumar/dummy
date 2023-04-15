@@ -10,11 +10,11 @@ import SavedNews from "./pages/SavedNews/Savednews";
 import Search from "./pages/Search/Search";
 import { Context } from ".";
 import axios from "axios";
-
+import backEndUrl from "./host";
 function App() {
   const {setUser,setIsAuthenticated}=useContext(Context);
   useEffect(()=>{
-    axios.get("https://nodeapp-r38l.onrender.com/users",{
+    axios.get(`${backEndUrl}/users`,{
       withCredentials:true,
     }).then(res=>{
       setUser(res.data.user);
