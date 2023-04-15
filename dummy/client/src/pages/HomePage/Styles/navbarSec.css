@@ -1,0 +1,30 @@
+.total{
+    border: 2px solid black;
+}
+.text{
+    font-size: 2.5rem;
+    padding: 1rem;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+.nav-sec-link{
+    border: 2px solid brown;
+    border-radius: 10px;
+    border-style: inset;
+    color: #2a2a2a;
+    background-color: #f9f4ed;
+    font-size: 1.2rem;
+
+}
+
+.navv{
+    padding: 10px 18px;
+    margin-bottom: 1.5rem;
+    justify-content: space-between;
+}
+
+.nav-sec-link:hover{
+    box-shadow: 0 2px 10px 0 rgba(251, 182, 117, 0.24), 0 10px 30px 0 rgba(194, 90, 22, 0.19);
+    border:2px solid brown;
+    border-style: outset;
+}

@@ -1,0 +1,37 @@
+<style>
+	.finlogix-container{
+		margin: 0;
+		padding: 0;
+		background-color: #e6dbcb;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
+
+<div class="finlogix-container">
+	
+    <div id="128b2b"></div>
+    </div>
+	
+    <script type="text/javascript" src="https://widget.finlogix.com/Widget.js"></script>
+	
+    <script type="text/javascript">
+		
+    Widget.init({
+			type: 'BigChart',
+			width: 1265,
+			height: 666,
+			language: 'en',
+			symbolName: 'Tesla',
+			hasSymbolDetail: false,
+			hasProductDetail: true,
+			hasSymbolChange: false,
+			hasButton: false,
+			hasSearchBar: true,
+			timeframe: 'D1',
+			chartShape: 'candles'
+		})
+	</script>

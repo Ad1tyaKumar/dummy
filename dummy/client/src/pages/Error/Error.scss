@@ -1,0 +1,27 @@
+.errorpage{
+    background-color: #efe6da;
+    width: 100vw;
+    height: 100vh;
+    .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: x-large;
+        margin-bottom: 120px;
+        img{
+            width: 35vw;
+            height:45vh;
+            margin: 50px;
+        }
+        button{
+            cursor: pointer;
+            border: 2px solid black;
+            border-radius: 30px;
+            background-color: #af695c;
+            color: white;
+            padding: 5px;
+            font-size: larger;
+        }
+    }
+}

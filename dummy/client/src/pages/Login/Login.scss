@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&family=Ubuntu:ital,wght@0,400;1,300&display=swap');
+
+.maindivlogin{
+    margin: 0;
+    margin-top: -5px;
+    padding: 0;
+    background-color: #e6dbcb;
+    background-image: url("https://tse1.mm.bing.net/th?id=OIP.rcmP9Bgzh8hZBYpdXFp39wHaHa&pid=Api&P=0");
+    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Ubuntu;
+    .secondmaindiv{
+        z-index: 4;
+        position: relative;
+        .logintitle{
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: xxx-large;
+            border-radius: 15px;
+            margin: 10px;
+            text-decoration-line: underline;
+            background-color: #af695c;
+            color: white;
+            padding: 10px;
+            border: 2px solid white;
+            
+        }
+        .login{
+            border-radius: 10%;
+            padding: 70px;
+            background-image: url("https://tse4.mm.bing.net/th?id=OIP._fDLRmrrxYn5McX7sRn8IgHaEK&pid=Api&P=0");
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // padding: 10px;
+            border: 2px solid #af695c;
+        }
+        input{
+            font-size: large;
+            margin: 5px;
+            border-radius: 5px;
+            padding: 15px;
+            background: none;
+        }
+        button{
+            font-size: large;
+            margin: 7px;
+            padding: 15px;
+            cursor: pointer;
+            border: 4px solid white;
+            border-radius: 30px;
+            background-color: #af695c;
+            color: white;
+        }
+        
+        .newuser{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+            justify-content:space-around;
+            margin: 5px;
+            font-size: x-large;
+            margin-top: 20px;
+        }
+        .textt{
+            width: 100%;
+        }
+        .signup{
+            font-size: medium;
+        }
+    }
+    
+}
+
+
