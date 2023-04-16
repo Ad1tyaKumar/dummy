@@ -42,7 +42,7 @@ const CarouselComponent = () => {
 
   const fetchdata = async () => {
     setLoading(true);
-    await fetch("https://flask-production-bafc.up.railway.app")
+    await fetch("https://flask-production-bafc.up.railway.app/search/virat")
       .then((response) => {
         return response.json();
       })
