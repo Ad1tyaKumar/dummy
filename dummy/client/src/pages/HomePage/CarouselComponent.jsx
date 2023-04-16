@@ -42,7 +42,7 @@ const CarouselComponent = () => {
 
   const fetchdata = async () => {
     setLoading(true);
-    await fetch("https://amiteshpatel.pythonanywhere.com/local")
+    await fetch("https://amiteshpatel.pythonanywhere.com/search/ipl")
       .then((response) => {
         return response.json();
       })
