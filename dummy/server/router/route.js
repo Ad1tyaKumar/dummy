@@ -42,8 +42,8 @@ router.get('/logout', (req, res) => {
     res.status(200).cookie("token", "",{
         httpOnly: true,
         expires: new Date(Date.now()),
-        sameSite: process.env.NODE_ENV === "Development" ? "lax" : "none",
-        secure: process.env.NODE_ENV === "Development" ? false : true,
+        sameSite:"none",
+        secure:true,
     }
     ).json({
         success: true,
@@ -58,7 +58,7 @@ router.get('/users', async(req, res) => {
             message:"Login First",
         });
     }
-    const decoded=jwt.verify(token,process.env.JWT_SECRET);
+    const decoded=jwt.verify(token,'akdlfjladjf');
     const user = await User.findById(decoded._id);
     res.status(200).json({
         success:true,
@@ -76,7 +76,7 @@ router.post('/book',async(req,res)=>{
             });
         }
         const {i}=req.body;
-        const decoded= jwt.verify(token,process.env.JWT_SECRET);
+        const decoded= jwt.verify(token,'akdlfjladjf');
         const user =await User.findById(decoded._id);
         await user.updateOne({$push:{bookmarks:i}});
         await user.save()
@@ -96,7 +96,7 @@ router.post('/unbook',async(req,res)=>{
     try {
         const {token}=req.cookies;
         const {i}=req.body;
-        const decoded=jwt.verify(token,process.env.JWT_SECRET);
+        const decoded=jwt.verify(token,'akdlfjladjf');
         const user =await User.findById(decoded._id);
         console.log('Unbooked');
         await user.updateOne({$pull:{"bookmarks":{Headline:i.Headline}}});

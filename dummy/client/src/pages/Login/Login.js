@@ -65,16 +65,8 @@ export default function Login() {
   };
 
 
-  const google = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      window.open('http://localhost:4000/auth/google','_self');
-    } catch (er) {
-      setIsAuthenticated(false);
-      setLoading(false);
-      console.log(er);
-    }
+  const google =  () => {
+    
   }
 
   const twitter =()=>{

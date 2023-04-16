@@ -8,7 +8,7 @@ import Button from "@mui/material/Button";
 import { Context } from "../..";
 import axios from "axios";
 import useGeoLocation from "../../pages/Hooks/useGeoLocation";
-
+import backEndUrl from "../../host";
 const Navbar = () => {
   const pathClasses = [
     { path: '/', class: 'nav-link link' },
@@ -34,7 +34,7 @@ const Navbar = () => {
     useContext(Context);
   const logoutHandler = async () => {
     try {
-      const { data } = await axios.get("http://localhost:4000/logout", {
+      const { data } = await axios.get(`${backEndUrl}/logout`, {
         withCredentials: true,
       });
       setIsAuthenticated(false);
