@@ -12,6 +12,7 @@ import { Link, Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { Context } from "../..";
 import backEndUrl from "../../host";
+import jsn from '../../dummy.json'
 const CarouselComponent = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -42,12 +43,13 @@ const CarouselComponent = () => {
 
   const fetchdata = async () => {
     setLoading(true);
-    await fetch("https://flask-production-bafc.up.railway.app/search/virat")
-      .then((response) => {
-        return response.json();
-      })
-      .then((res) => {
-        const data = Object.values(res);
+    // await fetch("https://flask-production-bafc.up.railway.app/search/virat")
+    //   .then((response) => {
+    //     return response.json();
+    //   })
+    //   .then((res) => {
+
+        const data = Object.values(jsn);
         var temp = [];
 
         for (let i = 0; i < data.length; i++) {
@@ -55,10 +57,10 @@ const CarouselComponent = () => {
         }
         setPosts([...temp]);
         setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err.message);
-      });
+      // })
+      // .catch((err) => {
+      //   console.log(err.message);
+      // });
   };
 
   useEffect(() => {
