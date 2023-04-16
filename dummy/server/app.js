@@ -15,7 +15,7 @@ const app = express();
 //middle wares
 
 config({
-    path:'./db/.env'
+    path:'../.env'
 })
 
 app.use(cookieParser());
@@ -23,7 +23,7 @@ app.use(express.json());
 // app.use(passport.initialize());
 // app.use(passport.session());
 app.use(cors({
-    origin:'https://dummy-git-main-ad1tyakumar.vercel.app',
+    origin:process.env.FRONTEND_URL,
     methods:["GET","POST","PUT","DELETE"],
     credentials:true,
 }))
